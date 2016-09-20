@@ -11,6 +11,6 @@
     
     ##Screenshots
     
-    ![screenshot1](screenshot1.png)
-    ![screenshot2](screenshot2.png)
+    ![screenshot1](https://github.com/WinWizard/laptopi3wmconfigs/screenshot1.png)
+    ![screenshot2](https://github.com/WinWizard/laptopi3wmconfigs/screenshot2.png)
 
