@@ -14,7 +14,7 @@ exec --no-startup-id synclient TouchpadOff=1
 #set backlight to 20%
 exec --no-startup-id xbacklight -set 20 
 #restore wallpaper
-exec --no-startup-id nitrogen --restore &
+exec --no-startup-id feh --bg-scale ~/Wallpapers/rwby_brown_eyes_brown_hair_ruby_rwby_scythe_weapon_2560x1690.jpg 
 #remap specified keys
 exec_always --no-startup-id /home/dylan/.i3/.Xmodmap
 #load Xresources
@@ -50,7 +50,7 @@ for_window [class="Speedcrunch"] floating enable
 
 
 #font
-font pango:monospace 14
+font xft:inconsolata Large 14 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -90,7 +90,7 @@ bindsym $mod+l exec i3lock -i /tmp/image.png -t -g
 bindsym XF86LaunchA exec ~/.i3/touchpad-toggle.sh
 
 #Screenshot
-bindsym $mod+Shift+p exec scrot '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/' 
+bindsym $mod+Shift+p exec ~/.i3/snipping.sh 
 
 #launch apps
 bindsym XF86HomePage exec firefox-aurora 
