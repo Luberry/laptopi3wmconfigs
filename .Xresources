@@ -44,3 +44,8 @@ URxvt*color14: #54FFFF
 ! white
 URxvt*color7:  #B2B2B2
 URxvt*color15: #FFFFFF
+
+URxvt.keysym.Home: \033OH
+URxvt.keysym.End: \033OF
+URxvt.keysym.KP_Home: \033OH
+URxvt.keysym.KP_End:  \033OF
