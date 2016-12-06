@@ -15,10 +15,13 @@ exec --no-startup-id synclient TouchpadOff=1
 exec --no-startup-id xbacklight -set 20 
 #restore wallpaper
 exec --no-startup-id feh --bg-scale ~/Wallpapers/rwby_brown_eyes_brown_hair_ruby_rwby_scythe_weapon_2560x1690.jpg 
+#load urxvtd on start
+exec --no-startup-id urxvtd
 #remap specified keys
 exec_always --no-startup-id /home/dylan/.i3/.Xmodmap
 #load Xresources
 exec_always --no-startup-id xrdb ~/.i3/.Xresources  
+
 
 ######End AutoRuns######
 
@@ -93,8 +96,8 @@ bindsym XF86LaunchA exec ~/.i3/touchpad-toggle.sh
 bindsym $mod+Shift+p exec ~/.i3/snipping.sh 
 
 #launch apps
-bindsym XF86HomePage exec firefox-aurora 
-bindsym $mod+Shift+f exec firefox-aurora 
+bindsym XF86HomePage exec env GTK_THEME=Raleigh firefox-aurora 
+bindsym $mod+Shift+f exec env GTK_THEME=Raleigh firefox-aurora 
 
 bindsym XF86Calculator exec speedcrunch
 
