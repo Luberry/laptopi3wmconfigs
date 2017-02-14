@@ -11,7 +11,7 @@ rofi.color-urgent: argb:64222222, #ff0400, argb:97000000, argb:d1aa0000, #ffffff
 ! ------------------------------------------------------------------------------
 ! URXVT
 ! ------------------------------------------------------------------------------
-URxvt.font: xft:inconsolata:size=14
+URxvt.font: xft:Inconsolata\\-dz for Powerline:dz:size=14
 URxvt.background: rgba:0000/0000/0000/BB00
 URxvt.foreground: rgb:FF/FF/FF
 URxvt.depth: 32

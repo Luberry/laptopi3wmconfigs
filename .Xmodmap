@@ -1,0 +1,7 @@
+#!/bin/bash
+#Add print to Mod4 to emulate a right windows button (Lenovo TP w541 layout)
+test=`xmodmap | grep Print`
+if ["$test" == ""]; then
+xmodmap -e 'add Mod4 = Print'
+fi
+# vim: filetype=sh

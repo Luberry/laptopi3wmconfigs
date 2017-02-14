@@ -10,7 +10,7 @@ exec --no-startup-id compton -b
 #Bluetooth Manger
 exec --no-startup-id blueman-applet
 #Kill touchpad at boot
-exec --no-startup-id synclient TouchpadOff=1 
+exec --no-startup-id xinput disable "SynPS/2 Synaptics TouchPad"
 #set backlight to 20%
 exec --no-startup-id xbacklight -set 20 
 #restore wallpaper
@@ -49,7 +49,8 @@ gaps inner 15
 
 
 #floating windows
-for_window [class="Speedcrunch"] floating enable
+for_window [class="SpeedCrunch"] floating enable
+for_window [window_role="pop-up"] floating enable
 
 
 #font
