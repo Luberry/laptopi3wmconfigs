@@ -7,6 +7,7 @@ TERM=xterm-256color
 # time that oh-my-zsh is loaded.
 DEFAULT_USER="dylan"
 ZSH_THEME="agnoster"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -53,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/home/dylan/Android/Sdk/platform-tools/:$PATH"
+  export PATH="/home/dylan/Android/Sdk/platform-tools/:/home/Xilinx/Vivado/2016.4/bin/:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,3 +83,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias kratosres="ssh root@10.8.0.226 virsh reset centos7.0"

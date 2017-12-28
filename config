@@ -97,8 +97,8 @@ bindsym XF86LaunchA exec ~/.i3/touchpad-toggle.sh
 bindsym $mod+Shift+p exec ~/.i3/snipping.sh 
 
 #launch apps
-bindsym XF86HomePage exec env GTK_THEME=Raleigh firefox-aurora 
-bindsym $mod+Shift+f exec env GTK_THEME=Raleigh firefox-aurora 
+bindsym XF86HomePage exec env GTK_THEME=AdwaitaDark waterfox 
+bindsym $mod+Shift+f exec env GTK_THEME=AdwaitaDark waterfox 
 
 bindsym XF86Calculator exec speedcrunch
 
