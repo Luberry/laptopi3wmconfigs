@@ -2,17 +2,17 @@
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: argb:77000000, argb:77ff0000, argb:ccff0000
-rofi.color-normal: argb:44222222, #fff8f8, argb:69000000, argb:6cff0000, #ffffff
-rofi.color-active: argb:d7222222, #ffffff, argb:b0000000, argb:9dff0000, #ffffff
+rofi.color-window: argb:77000000, argb:77cc00cc, argb:cccc00cc
+rofi.color-normal: argb:44222222, #fff8f8, argb:69000000, argb:6ccc00cc, #ffffff
+rofi.color-active: argb:d7222222, #ffffff, argb:b0000000, argb:9dcc00cc, #ffffff
 rofi.color-urgent: argb:64222222, #ff0400, argb:97000000, argb:d1aa0000, #ffffff
-
 
 ! ------------------------------------------------------------------------------
 ! URXVT
 ! ------------------------------------------------------------------------------
-URxvt.font: xft:Inconsolata\\-dz for Powerline:dz:size=14
-URxvt.background: rgba:0000/0000/0000/BB00
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt*font: xft:Droid Sans Mono Dotted for Powerline:pixelsize=14
+URxvt.background: rgba:0000/0000/0000/DD00
 URxvt.foreground: rgb:FF/FF/FF
 URxvt.depth: 32
 URxvt.scrollBar: False
@@ -49,3 +49,4 @@ URxvt.keysym.Home: \033OH
 URxvt.keysym.End: \033OF
 URxvt.keysym.KP_Home: \033OH
 URxvt.keysym.KP_End:  \033OF
+Xcursor.size: 5
