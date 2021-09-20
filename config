@@ -9,13 +9,14 @@ exec --no-startup-id sudo lighting
 #composition manager
 exec --no-startup-id compton -b
 #Bluetooth Manger
-exec --no-startup-id blueman-applet
+exec --no-startup-id sudo blueman-applet
 #set backlight to 20%
 exec --no-startup-id xbacklight -set 20
 #restore wallpaper
 exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.jpg
 #remap specified keys
 exec_always --no-startup-id ~/.i3/.Xmodmap
+exec_always --no-startup-id xbindkeys -f ~/.i3/.xbindkeysrc
 #load Xresources
 exec_always --no-startup-id xrdb ~/.i3/.Xresources  
 exec --no-startup-id caffeine-indicator
@@ -27,6 +28,7 @@ exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id urxvtc -name bottomTerm
 exec --no-startup-id urxvtc -name mainTerm
+exec --no-startup-id pactl set-sink-mute 0 1 && pkill -RTMIN+10 i3blocks
 #exec --no-startup-id firefox
 
 ######End AutoRuns######
@@ -151,9 +153,10 @@ bindsym $mod+Shift+Return exec urxvtc -name bottomTerm
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +5% && pkill -RTMIN+10 i3blocks && notify-send "Volume +5%"
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute 0 0 && pactl set-sink-volume 0 -5% && pkill -RTMIN+10 i3blocks && notify-send "Volume -5%"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+10 i3blocks && notify-send "Audio Output Toggled"
-bindsym F20 exec --no-startup-id pactl set-source-mute 0 toggle && pkill -RTMIN+10 i3blocks && notify-send "Audio Input Toggled"
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle && pkill -RTMIN+10 i3blocks && notify-send "Audio Input Toggled"
+bindsym $mod+F20 exec --no-startup-id pactl set-source-mute 0 toggle && pkill -RTMIN+10 i3blocks && notify-send "Audio Input Toggled"
+bindsym $mod+XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle && pkill -RTMIN+10 i3blocks && notify-send "Audio Input Toggled"
 #bindsym XF86AudioMicMute exec --no-startup-id amixer set-source-mute 0 toggle && pkill -RTMIN+10 i3blocks && notify-send "Audio Input Toggled"
+
 
 # Playerctl
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -259,6 +262,50 @@ bindsym $mod+Shift+Ctrl+7 move container to workspace 17
 bindsym $mod+Shift+Ctrl+8 move container to workspace 18
 bindsym $mod+Shift+Ctrl+9 move container to workspace 19
 bindsym $mod+Shift+Ctrl+0 move container to workspace 20
+
+bindsym XF86Tools workspace 1
+bindsym XF86Launch5 workspace 2
+bindsym XF86Launch6 workspace 3
+bindsym XF86Launch7 workspace 4
+bindsym XF86Launch8 workspace 5
+bindsym XF86Launch9 workspace 6
+bindcode 197 workspace 7
+bindsym XF86TouchpadToggle workspace 8
+bindsym XF86TouchpadOn workspace 9
+bindsym XF86TouchpadOff workspace 10
+
+bindsym Ctrl+XF86Tools workspace 11
+bindsym Ctrl+XF86Launch5 workspace 12
+bindsym Ctrl+XF86Launch6 workspace 13
+bindsym Ctrl+XF86Launch7 workspace 14
+bindsym Ctrl+XF86Launch8 workspace 15
+bindsym Ctrl+XF86Launch9 workspace 16
+bindcode 37+197 workspace 17
+bindsym Ctrl+XF86TouchpadToggle workspace 18
+bindsym Ctrl+XF86TouchpadOn workspace 19
+bindsym Ctrl+XF86TouchpadOff workspace 20
+
+bindsym Shift+XF86Tools move container to workspace 1
+bindsym Shift+XF86Launch5 move container to workspace 2
+bindsym Shift+XF86Launch6 move container to workspace 3
+bindsym Shift+XF86Launch7 move container to workspace 4
+bindsym Shift+XF86Launch8 move container to workspace 5
+bindsym Shift+XF86Launch9 move container to workspace 6
+bindcode 50+97 move container to workspace 7
+bindsym Shift+XF86TouchpadToggle move container to workspace 8
+bindsym Shift+XF86TouchpadOn move container to workspace 9
+bindsym Shift+XF86TouchpadOff move container to workspace 10
+
+bindsym Shift+Ctrl+XF86Tools move container to workspace 11
+bindsym Shift+Ctrl+XF86Launch5 move container to workspace 12
+bindsym Shift+Ctrl+XF86Launch6 move container to workspace 13
+bindsym Shift+Ctrl+XF86Launch7 move container to workspace 14
+bindsym Shift+Ctrl+XF86Launch8 move container to workspace 15
+bindsym Shift+Ctrl+XF86Launch9 move container to workspace 16
+bindcode 50+37+197 move container to workspace 17
+bindsym Shift+Ctrl+XF86TouchpadToggle move container to workspace 18
+bindsym Shift+Ctrl+XF86TouchpadOn move container to workspace 19
+bindsym Shift+Ctrl+XF86TouchpadOff move container to workspace 20
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

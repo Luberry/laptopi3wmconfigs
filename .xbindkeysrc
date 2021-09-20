@@ -1,0 +1,5 @@
+"xset -r 66; pactl set-source-mute 0 0;pkill -RTMIN+10 i3blocks"
+  c:198
+
+"xset -r 66; pactl set-source-mute 0 1;pkill -RTMIN+10 i3blocks"
+  release+c:198
